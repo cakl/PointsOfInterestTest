@@ -7,16 +7,31 @@
 //
 
 #import "AppDelegate.h"
+#import "CoreLocationDelegate.h"
+#import <MapKit/MapKit.h>
+
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) CLLocationManager* locationManager;
+@property (nonatomic, strong) CLGeocoder* geocoder;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
+    request.naturalLanguageQuery = @"Restaurants";
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.00001, 0.00001);
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(47.424977, 9.383442);
+    MKCoordinateRegion region = MKCoordinateRegionMake(coordinate, span);
+    request.region = region;
+    MKLocalSearch *search = [[MKLocalSearch alloc] initWithRequest:request];
+    [search startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
+        NSLog(@"Map Items: %@", response.mapItems);
+    }];
+    
     return YES;
 }
 

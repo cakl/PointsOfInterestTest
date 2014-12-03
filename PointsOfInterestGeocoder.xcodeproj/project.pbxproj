@@ -14,6 +14,9 @@
 		27863C9F19E3342A00D19666 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27863C9E19E3342A00D19666 /* Images.xcassets */; };
 		27863CA219E3342A00D19666 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27863CA019E3342A00D19666 /* LaunchScreen.xib */; };
 		27863CAE19E3342A00D19666 /* PointsOfInterestGeocoderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27863CAD19E3342A00D19666 /* PointsOfInterestGeocoderTests.m */; };
+		27863CB919E3345300D19666 /* CoreLocationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27863CB819E3345300D19666 /* CoreLocationDelegate.m */; };
+		27863CBB19E334AC00D19666 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27863CBA19E334AC00D19666 /* CoreLocation.framework */; };
+		27863CBD19E33F8E00D19666 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27863CBC19E33F8E00D19666 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		27863CA719E3342A00D19666 /* PointsOfInterestGeocoderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PointsOfInterestGeocoderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27863CAC19E3342A00D19666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27863CAD19E3342A00D19666 /* PointsOfInterestGeocoderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PointsOfInterestGeocoderTests.m; sourceTree = "<group>"; };
+		27863CB719E3345300D19666 /* CoreLocationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationDelegate.h; sourceTree = "<group>"; };
+		27863CB819E3345300D19666 /* CoreLocationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationDelegate.m; sourceTree = "<group>"; };
+		27863CBA19E334AC00D19666 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		27863CBC19E33F8E00D19666 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27863CBD19E33F8E00D19666 /* MapKit.framework in Frameworks */,
+				27863CBB19E334AC00D19666 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,8 @@
 		27863C8519E3342A00D19666 = {
 			isa = PBXGroup;
 			children = (
+				27863CBC19E33F8E00D19666 /* MapKit.framework */,
+				27863CBA19E334AC00D19666 /* CoreLocation.framework */,
 				27863C9019E3342A00D19666 /* PointsOfInterestGeocoder */,
 				27863CAA19E3342A00D19666 /* PointsOfInterestGeocoderTests */,
 				27863C8F19E3342A00D19666 /* Products */,
@@ -85,6 +96,8 @@
 				27863C9619E3342A00D19666 /* AppDelegate.m */,
 				27863C9819E3342A00D19666 /* ViewController.h */,
 				27863C9919E3342A00D19666 /* ViewController.m */,
+				27863CB719E3345300D19666 /* CoreLocationDelegate.h */,
+				27863CB819E3345300D19666 /* CoreLocationDelegate.m */,
 				27863C9B19E3342A00D19666 /* Main.storyboard */,
 				27863C9E19E3342A00D19666 /* Images.xcassets */,
 				27863CA019E3342A00D19666 /* LaunchScreen.xib */,
@@ -221,6 +234,7 @@
 			files = (
 				27863C9A19E3342A00D19666 /* ViewController.m in Sources */,
 				27863C9719E3342A00D19666 /* AppDelegate.m in Sources */,
+				27863CB919E3345300D19666 /* CoreLocationDelegate.m in Sources */,
 				27863C9419E3342A00D19666 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
